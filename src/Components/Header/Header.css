@@ -6,6 +6,12 @@
     justify-content: space-between;
     padding-left: 140px;
     padding-right: 140px;
+
+    /* use this style for navbar fix:===
+    position: fixed; 
+    z-index: 9999; 
+    width: 80%;
+     */
 }
 
 .header a{

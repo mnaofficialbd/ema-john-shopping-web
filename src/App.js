@@ -10,7 +10,7 @@ function App() {
 
 
 
-      <div className='design'><small>Design by M_N_A</small></div>
+      <div className='design'><small>Design by M_N_A(@mnaofficialbd)</small></div>
     </div>
   );
 }
