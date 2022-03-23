@@ -14,10 +14,10 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, []);
     const handleAddToCart = (product) => {
-        // cart.push(product)
+        //not allow this step: cart.push(product)
         const newCart = [...cart, product]
         setCart(newCart)
-        console.log(product);
+        // console.log(product);
     }
 
     return (
