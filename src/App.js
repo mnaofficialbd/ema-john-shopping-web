@@ -7,6 +7,10 @@ function App() {
     <div>
       <Header></Header>
       <Shop></Shop>
+
+
+
+      <div className='design'><small>Design by M_N_A</small></div>
     </div>
   );
 }

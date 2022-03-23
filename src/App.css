@@ -32,3 +32,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.design{
+  background-color: rgb(40, 253, 86);
+  padding: 4px;
+  text-align: center;
+}
