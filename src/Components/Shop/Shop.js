@@ -25,23 +25,26 @@ const Shop = () => {
                 addedProduct.quantity = quantity;
                 savedCart.push(addedProduct)
             }
-
-            /* if (Object.hasOwnProperty.call(object, id)) {
-                const element = object[id];
-                object
-            } */
         }
         setCart(savedCart)
-        // console.log('local storage finish');
-        // console.log(storedCart);
     }, [products]);
 
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (selectedProduct) => {
         //not allow this step: cart.push(product)
-        const newCart = [...cart, product]
+        let newCart = [];
+        const exists = cart.map(product => product.id === selectedProduct.id)
+        if (!exists) {
+            selectedProduct.quantity = 1;
+            newCart = [...cart, selectedProduct]
+        }
+        else {
+            const rest = cart.filter(product => product.id !== selectedProduct.id);
+            exists.quantity = exists.quantity + 1;
+            newCart = [...rest, exists]
+        }
+        // const newCart = [...cart, selectedProduct]
         setCart(newCart)
-        addToDb(product.id)
-        // console.log(product);
+        addToDb(selectedProduct.id)
     }
 
     return (
