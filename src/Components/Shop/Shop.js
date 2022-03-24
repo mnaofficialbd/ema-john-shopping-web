@@ -32,7 +32,7 @@ const Shop = () => {
     const handleAddToCart = (selectedProduct) => {
         //not allow this step: cart.push(product)
         let newCart = [];
-        const exists = cart.map(product => product.id === selectedProduct.id)
+        const exists = cart.find(product => product.id === selectedProduct.id)
         if (!exists) {
             selectedProduct.quantity = 1;
             newCart = [...cart, selectedProduct]
